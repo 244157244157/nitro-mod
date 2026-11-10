@@ -68,7 +68,7 @@ class NitroMod extends PolyMod {
 
     pml.registerClassMixin("MainLoop", "update", MixinType.HEAD, (args) => {
       if (this.nitroAtivo && args && args.length > 0) {
-        args *= this.forcaNitro;
+        args[0] *= this.forcaNitro;
       }
     });
   }
